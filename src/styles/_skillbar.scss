@@ -1,0 +1,104 @@
+.skill-box {
+  width: 100%;
+  max-width: 420px;
+  margin: 20px 0;
+  font-family: sans-serif;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Fundo da barra */
+.skill-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: visible; /* Mude para visible se o tooltip estiver cortando */
+  height: 10px;
+}
+
+/* Barra de preenchimento (agora unificada) */
+.skill-per {
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #4070f4;
+  position: relative;
+  width: 100%; /* Inicia em 100% por padrão */
+  transition: width 0.8s ease-in-out; /* Controla a velocidade do efeito */
+}
+
+/* Tooltip (Balãozinho) */
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #4070f4;
+}
+
+/* Definindo as porcentagens de cada barra */
+.skill-per.full{
+  width: 100%;
+}
+.skill-per.html {
+  width: 95%;
+}
+
+.skill-per.css {
+  width: 70%;
+}
+
+.skill-per.js {
+  width: 40%;
+}
+
+.skill-per.bs {
+  width: 80%;
+}
+
+.skill-per.sass {
+  width: 80%;
+}
+
+.skill-per.ts {
+  width: 35%;
+}
+
+.skill-per.php {
+  width: 45%;
+}
+
+.skill-per.mysql {
+  width: 15%;
+}
+
+.skill-per.python {
+  width: 25%;
+}
+.skill-per.django {
+  width: 45%;
+}
+.skill-per.react {
+  width: 55%;
+}
+
+.skill-per.tailwind {
+  width: 34%;
+}
+
+/* Animação ao carregar */
+@keyframes fillBars {
+  from {
+    width: 0%;
+  }
+}

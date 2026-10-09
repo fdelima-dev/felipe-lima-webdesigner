@@ -1,0 +1,110 @@
+@use 'variables';
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variables.$corFundo;
+
+    @media (max-width: 768px){
+        position: unset;
+    }
+    .container {
+        max-width: 1540px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            display: block;
+        }
+
+        .container__brand {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 768px){
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            img {
+                width: 62px;
+                margin: 5px 20px;
+
+                @media (max-width: 768px){
+                    width: 44px;
+                    margin: 5px 5px;
+                }
+            }
+
+            h2 {
+                font-size: 22px;
+                font-family: variables.$fonteTema;
+                font-weight: bold;
+
+                @media (max-width: 768px){
+                    text-align: center;
+                }
+
+            }
+        }
+
+        .container__menu {
+
+            .container__menu__list {
+                list-style: none;
+
+                .container__menu__list__item {
+                    float: left;
+
+                    @media (max-width: 768px){
+                        float: none;
+                        text-align: center;
+                    }
+
+                    a {
+                        color: variables.$corLink;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                        display: block;
+                        font-size: 16px;
+                        &:hover{
+                            color: variables.$corTema;
+                        }
+                    }
+                }
+            }
+        }
+        .container__contactOne{
+            &__box{
+                float: right;
+
+                @media (max-width: 768px){
+                    float: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                a{
+                    background-color: variables.$corBox;
+                    padding: 12px;
+                    color: variables.$corFundo;
+                    font-size: 16px;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    transition: all .5s ease;
+
+                    &:hover{
+                        background-color: variables.$corTema;
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+        }
+    }
+}

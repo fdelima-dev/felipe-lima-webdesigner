@@ -1,0 +1,65 @@
+@use 'variables';
+
+.banner-ultimo{
+    max-width: 1540px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('../../build/images/role-brand.png');
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 4px;
+    @media (max-width: 768px){
+        background-position: left;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        h2{
+            display: none;
+            @media (max-width: 758px){
+                display: block;
+                padding-top: 80px;
+                color: variables.$corFundo;
+                text-shadow: 5px 5px 10px variables.$corLink;
+            }
+        }
+        &__rightSide{
+            text-align: right;
+            margin-left: auto;
+            p{
+                margin-bottom: 40px;
+                margin-right: 40px;
+                @media (max-width: 768px){
+                    display: none;
+                }
+            }
+            h3{
+                margin-right: 40px;
+                font-size: 42px;
+                @media (max-width: 768px){
+                    display: none;
+                }
+            }
+            button{
+                margin-right: 120px;
+                border: none;
+                padding: 10px;
+                background-color: variables.$corBox;
+                width: 120px;
+                text-align: center;
+                margin-top: 20px;
+                @media (max-width: 768px){
+                    margin-bottom: 80px;
+                }
+                a{
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: variables.$corFundo;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use 'variables';
+
+.frontback {
+    display: block;
+    width: 100%;
+    clear: both;
+
+    &__container {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        line-height: 1.7;
+        width: 800px;
+        margin: 50px auto;
+        border: 2px solid variables.$corBordaFront;
+        box-shadow: 0 4px 12px rgba(0,0,0,.2);
+
+        @media (max-width: 768px){
+            width: 320px;
+        }
+        h2{
+            font-size: 65px;
+            font-family: variables.$fonteTema;
+
+            @media (max-width: 768px){
+                font-size: 33px;
+            }
+        }
+        ul{
+            list-style: none;
+        }
+    }
+}

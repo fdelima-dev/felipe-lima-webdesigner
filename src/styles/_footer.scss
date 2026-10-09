@@ -1,0 +1,59 @@
+@use 'variables';
+
+footer{
+    background-color: variables.$corBox;
+    padding: 80px;
+    width: 100%;
+    margin-top: 100px;
+
+    @media (max-width: 768px){
+        padding: 40px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: 85px;
+            transform: translateY(20px);
+
+            @media (max-width: 768px){
+                width: 64px;
+            }
+        }
+        h3{
+            display: inline;
+        }
+        p{
+            color: variables.$headerFooter;
+            padding-top: 10px;
+        }
+        &__menu{
+            padding-left: 20px;
+            &__list{
+                list-style: none;
+                &__item{
+                    float: left;
+                    a{
+                        color: variables.$corFundo;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__social{
+            &__list{
+                list-style: none;
+                &__item{
+                    display: inline-block;
+                    padding: 20px;
+                    img{
+                        width: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

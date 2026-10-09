@@ -1,0 +1,66 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'dataOne';
+@use 'portfolio';
+@use 'about';
+@use 'skillbar';
+@use 'frontback';
+@use 'servicos';
+@use 'contato';
+@use 'banner';
+@use 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fonteTema;
+    src: url('../../assets/Inter/inter.regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Poppins/poppins.regular.ttf') format('truetype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+    font-size: 18px;
+    background-color: variables.$corFundo;
+}
+.corTema{
+    color: variables.$corTema;
+}
+.corLink{
+    color: variables.$corLink;
+}
+.headerFooter{
+    color: variables.$headerFooter;
+}
+h1, h2, h3{
+    color: variables.$corTituloDois;
+}
+.p-hero{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.p-projetos{
+    margin: 20px;
+}
+.heading-portfolio{
+    font-size: 65px;
+    font-family: variables.$fonteTema;
+    margin: 20px;
+
+    @media (max-width: 768px){
+        font-size: 33px;
+        text-align: center;
+    }
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,77 @@
+@use 'variables';
+
+.servicos{
+    padding-top: 50px;
+    display: block;
+    margin: 0 auto;
+    h2{
+        font-size: 65px;
+        text-align: center;
+    }
+    &__container{
+        max-width: 1540px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__card{
+            width: 400px;
+            background-color: variables.$corFundo;
+            border-radius: 12px;
+            margin: 20px 40px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+            a{  
+                display: block;
+                width: 210px;
+                margin: 0 auto;
+                background-color: variables.$corBox;
+                color: variables.$corFundo;
+                padding: 10px;
+                text-decoration: none;
+                border-radius: 12px;
+                transition: all .5s ease;
+                border: 2px solid transparent;
+                &:hover{
+                    background-color: variables.$corFundo;
+                    color: variables.$corLink;
+                    border: 2px solid variables.$corLink;
+                }
+            }
+            h3{
+                display: inline;
+            }
+            p{
+                text-align: center;
+                line-height: 1.6;
+                margin-top: 20px;
+            }
+            ul{
+                margin-top: 14px;
+                margin-left: 20px;
+                li {
+                font-size: 0.85rem;
+                color: variables.$colorLi;
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                content: "✓";
+                color: variables.$colorCheck;
+                font-weight: bold;
+                font-size: 22px;
+                margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+    }
+}
