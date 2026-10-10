@@ -1,0 +1,124 @@
+@use 'variables';
+
+.pinturas {
+    max-width: 1540px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch; /* Garante que todos os cards fiquem com a mesma altura total */
+        gap: 32px;
+    }
+}
+
+.pintura-card {
+    width: 300px; /* LARGURA FIXA: todos os cards terão exatamente 300px */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+
+        .pintura-card__imagem-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            /* Melhora a qualidade ao reduzir o tamanho da foto no navegador */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: high-quality;
+        }
+    }
+
+    /* Container da Imagem */
+    &__imagem-wrapper {
+        width: 100%;
+        height: 280px; /* ALTURA FIXA DA IMAGEM: padroniza a foto */
+        overflow: hidden;
+        background-color: #f8fafc;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Recorta a foto proporcionalmente sem achatar/esticar */
+            object-position: center;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+    }
+
+    /* Conteúdo dos Textos */
+    &__conteudo {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Preenche a altura para manter o botão sempre alinhado */
+        text-align: center;
+    }
+
+    &__categoria {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #64748b;
+        margin-bottom: 6px;
+    }
+
+    &__nome {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 12px;
+    }
+
+    &__preco {
+        margin-top: auto; /* Empurra o bloco de preço e botão para o final do card */
+        margin-bottom: 16px;
+
+        &-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        &-valor {
+            font-size: 1.3rem;
+            color: #0f172a;
+            font-weight: 800;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        background-color: #25d366;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #1eb956;
+        }
+    }
+}
