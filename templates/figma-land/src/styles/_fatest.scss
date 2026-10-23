@@ -1,0 +1,50 @@
+@use 'variables';
+
+.fatest{
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18% 0 18%;
+
+        @media (max-width: 768px){
+            display: block;
+            padding: 0;
+            text-align: center;
+            margin: 14px 0;
+        }
+
+        div{
+            img{
+                @media (max-width: 768px){
+                    width: 340px;
+                }
+            }
+        }
+        h2{
+            font-size: 48px;
+            line-height: 40px;
+            font-weight: 400;
+        }
+        p{
+            font-size: 28px;
+            line-height: 40px;
+            color: variables.$corParagrafo;
+            font-weight: 400;
+        }
+        button{
+            border: none;
+            padding: 10px;
+            margin: 35px auto 0;
+            background-color: #007bff;
+            width: 236px;
+            height: 52px;
+            color: #fff;
+            border-radius: 40px;
+            cursor: pointer;
+            @media (max-width: 768px){
+                margin: 20px 0;
+            }
+        }
+    }
+}

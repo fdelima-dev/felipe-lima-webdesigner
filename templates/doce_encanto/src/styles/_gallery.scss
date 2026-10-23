@@ -1,0 +1,94 @@
+@use 'variables';
+
+.gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    border-radius: 12px;
+    background-color: variables.$corBgGallery;
+    overflow: hidden;
+
+    @media (max-width: 850px) {
+        max-width: 200px;
+        height: 600px;
+        display: flex;             /* Garante que o container se comporte como flexbox no mobile */
+        flex-direction: column;    /* Empilha o conteúdo na vertical */
+        justify-content: flex-start; /* Alinha o conteúdo no topo */
+        align-items: flex-start;     /* Alinha o conteúdo à esquerda */
+    }
+    &__container {
+        display: flex;
+        align-items: center; // Centraliza todos os 3 blocos verticalmente
+        justify-content: space-between;
+        height: 100%;
+        padding: 0;
+
+        &__imageOne {
+            line-height: 0;
+            
+            img {
+                display: block;
+
+                @media (max-width: 850px){
+                    display: block;      /* Remove o espaço inline padrão abaixo da imagem */
+                    width: 100%;         /* Ajusta a largura da imagem ao container */
+                    height: auto;        /* Mantém a proporção da imagem */
+                    margin-top: 0;       /* Garante que não haja margem no topo */
+                    object-fit: cover;   /* Preenche o espaço caso a imagem tenha altura fixa */
+                }
+            }
+        }
+
+        &__brandHero {
+            flex: 1; // Ocupa o espaço central disponível
+            padding: 20px 30px;
+
+            .sobre {
+                margin: 0;
+                color: variables.$corTema;
+                font-size: 18px;
+            }
+            h2.sobreH2 {
+                font-size: 32px;
+                color: variables.$corLink;
+                font-family: variables.$fonteTema;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            a.linkSaibaMais {
+                color: variables.$corTema;
+                border: 2px solid variables.$corTema;
+                padding: 6px 12px;
+                border-radius: 12px;
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+
+        /* Estilo adicionado para posicionar a galeria no lado direito */
+    }
+}
+
+.aboutGallery {
+            padding-right: 20px; // Espaçamento da borda direita
+            display: block;
+            margin: 20px auto;
+            max-width: 1440px;
+            width: 100%;
+            margin-bottom: 50px;
+
+            &__menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+
+                &__list {
+                   margin: 20px;
+                    img {
+                        display: block;
+                    }
+                }
+            }
+}

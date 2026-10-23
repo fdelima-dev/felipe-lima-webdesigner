@@ -1,0 +1,64 @@
+@use 'variables';
+
+header{
+    max-width: 1440px;
+    height: 100px;
+    width: 100%;
+    background-color: variables.$corMenu;
+    padding: 60px 155px;
+    display: block;
+    margin: 0 auto;
+    position: sticky;
+    left: 0;
+    top: 0;
+    @media (max-width: 768px){
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0;
+        height: 100%;
+        left: none;
+        top: none;
+        position: unset;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 768px){
+            display: block;
+        }
+        &__menu{
+            &__list{
+                list-style: none;
+                    &__item{
+                        float: left;
+
+                        @media (max-width: 768px){
+                            float: none;
+                            text-align: center;
+                        }
+                            a{
+                                color: variables.$corMenuTexto;
+                                font-family: variables.$fonteMenu;
+                                text-decoration: none;
+                                padding: 14px 16px;
+                                display: block;
+                             }
+                    }
+                }
+            }
+            &__data{
+                &__menu{
+                        list-style: none;
+                        &__item{
+                            display: inline-block;
+                            padding-left: 20px;
+                        }
+                     }
+                } 
+        }
+            
+    }
+        

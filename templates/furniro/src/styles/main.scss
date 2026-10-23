@@ -1,0 +1,19 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'about';
+@use 'products';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontBrand;
+    src: url('../../assets/fonts/Montserrat-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: variables.$fonteMenu;
+    src: url('../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
