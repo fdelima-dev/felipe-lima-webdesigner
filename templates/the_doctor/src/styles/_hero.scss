@@ -1,0 +1,105 @@
+@use 'variables';
+
+.hero {
+    background-image: url('../../build/images/hero-the-doctor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+    
+    // Substitua 1920 / 700 pela largura e altura reais do seu arquivo de imagem
+    aspect-ratio: 1920 / 700; 
+    
+    margin-top: 78px;
+
+    @media (max-width: 768px){
+        background-image: none;
+    }
+    &__container{
+        @media (max-width: 768px){
+            display: block;
+        }
+        .img_import{
+            display: none;
+            @media (max-width: 768px){
+                display: block;
+                width: 350px;
+                margin: 0 auto;
+            }
+        }
+        
+        &__boxLeft{
+            padding-left: 200px;
+            padding-top: 120px;
+
+            @media (max-width: 768px){
+                padding-left: 0;
+                padding-top: 0;
+            }
+            &__paragrafo-para{
+                color: variables.$azulClaro;
+                font-size: 16px;
+                margin: 20px 0;
+                @media (max-width: 768px){
+                    padding-left: 14px;
+                }
+            }
+            h2{
+                font-size: 74px;
+                font-family: variables.$fonteTema;
+                font-weight: bold;
+                margin-bottom: 12px;
+
+                @media (max-width: 768px){
+                    font-size: 55px;
+                    text-align: center;
+                }
+            }
+            p{
+                font-size: 20px;
+                @media (max-width: 768px){
+                    font-size: 16px;
+                }
+            }
+             
+        }
+    }
+}
+.box{
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px){
+        display: block;
+    }
+    img{
+        display: inline;
+        padding: 0 3px;
+    }
+    a.linkHero{
+        background-color: variables.$corTema;
+        color: variables.$corFundo;
+        text-decoration: none;
+        display: flex;
+        padding: 8px;
+        border-radius: 8px;
+        width: 174px;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+    p{
+        padding-top: 12px;
+    }
+    a{
+        color: variables.$corTema;
+        text-decoration: none;
+        &:hover{
+            color: variables.$azulClaro;
+            text-decoration: underline;
+        }
+    }
+}

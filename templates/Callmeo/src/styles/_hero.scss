@@ -1,0 +1,81 @@
+@use 'variables';
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 768px){
+        display: block;
+    }
+    img{
+        width: 810px;
+        height: 700px;
+        margin: 0 0 0 42%;
+        position: relative;
+
+        @media (max-width: 768px){
+            position:unset;
+            margin: 08px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__img-overlay{
+        position: absolute;
+        float: left;
+        top: 25%;
+        right: 0;
+        bottom: 0;
+        left: 14%;
+        background-color: variables.$corHero;
+        width: 587px;
+        height: 480px;
+        text-align: center;
+        @media (max-width: 768px){
+            position:unset;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: justify;
+            padding: 20px 10px 40px 50px;
+
+        }
+
+        h2{
+            font-size: 54px;
+            color: #fff;
+            margin-top: 40px;
+            @media (max-width: 768px){
+                font-size: 36px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .btn-hero{
+            border: none;
+            margin: 50px 0 0 0;
+            padding: 14px;
+            width: 200px;
+            font-size: 24px;
+            background-color: variables.$coBtnHero;
+            color: variables.$corGelo;
+            cursor: pointer;
+            transition: all .5s ease;
+            &:hover{
+                background-color: variables.$corHamburger;
+            }
+        }
+        
+    }
+}
+hr {
+    border: none;
+    border-top: 4px solid black;
+    width: 90%;
+    margin: 40px auto;
+    
+    @media (max-width: 768px){
+        width: 100%;
+    } 
+}

@@ -1,0 +1,38 @@
+@use 'variables';
+
+.data{
+    max-width: 1440px;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+    &__container{
+        width: 500px;
+        margin: 0 auto;
+        @media (max-width: 768px){
+            width: 250px;
+            display: block;
+        }
+        div{
+            display: inline-block;
+            width: 150px;
+            margin: 20px 40px;
+
+            @media (max-width: 768px){
+                margin: 20px auto;
+                display: block;
+            }
+            a{
+                background-color: variables.$corTema;
+                padding: 10px 20px;
+                width: 100%;
+                text-align: center;
+                color: variables.$corBranco;
+                text-decoration: none;
+                display: block;
+                box-sizing: border-box;
+                
+            }
+        }
+        
+    }
+}

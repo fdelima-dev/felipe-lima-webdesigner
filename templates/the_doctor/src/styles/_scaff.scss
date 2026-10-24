@@ -1,0 +1,42 @@
+@use "variables";
+
+.scaff{
+    background-color: variables.$azulClarinho;
+    padding: 50px;
+    @media (max-width: 768px){
+        margin-top: 50px;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 768px){
+            display: block;
+        }
+        &__item{
+            width: 320px;
+            margin: 20px 8px;
+            background-color: variables.$corFundo;
+            border-radius: 12px;
+            box-shadow: 0 0 10px variables.$corTexto;
+
+            @media (max-width: 768px){
+                margin: 20px 0;
+            }
+            img{
+                width: 100px;
+                display: block;
+                margin: 10px auto;
+            }
+            p.first{
+                font-weight: bold;
+            }
+            p{
+                padding: 12px;
+                text-align: center;
+                line-height: 1.6;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

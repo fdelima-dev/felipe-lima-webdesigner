@@ -1,0 +1,22 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'about';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Montserrat-Regular.ttf') format('truetype'); 
+}
+@font-face {
+    font-family: variables.$fontePrincipalBold;
+    src: url('../../assets/Montserrat-Black.ttf') format('truetype');
+}
+body{
+    background-color: variables.$corFundo;
+    font-family: sans-serif;
+}

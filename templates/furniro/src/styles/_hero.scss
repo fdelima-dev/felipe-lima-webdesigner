@@ -1,0 +1,65 @@
+@use 'variables';
+
+.hero{
+    background: url('../../build/images/scandinavian-interior-mockup-wall-decal-background.png') no-repeat center center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 716px;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 15px;
+    @media (max-width: 768px){
+        height: 100%;
+        max-width: 100%;
+    }    
+    &__wallText{
+        width: 643px;
+        background-color: #FFF3E3;
+        height: 443px;
+        margin: 0 0 0 50%;
+        @media(max-width: 768px){
+            width: 250px;
+            height: 250px;
+            margin: 0;
+        }
+        &__arrival{
+            margin-top:50px;
+            margin-left: 30px;
+            display: block;
+            font-family: variables.$fonteMenu;
+            &__headingArrival{
+                font-family: variables.$fonteMenu;
+                color: variables.$corBannerEscrito;
+                font-weight: 700;
+                font-size: 52px;
+                margin-left: 30px;
+                line-height: 62px;
+                @media (max-width: 768px){
+                    font-size: 25px;
+                }
+            }
+            &__txt{
+                font-family: variables.$fonteMenu;
+                margin-left: 30px;  
+                line-height: 24px;
+                @media (max-width: 768px){
+                    display: none;
+                }
+            }
+        }
+        &__button{
+            background-color: #B88E2F;
+            color: #fff;
+            font-family: variables.$fonteMenu;
+            border: none;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            margin-left: 30px;
+            margin-top: 25px;
+        }
+    }
+}

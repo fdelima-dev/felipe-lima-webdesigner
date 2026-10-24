@@ -1,0 +1,40 @@
+@use 'variables';
+
+.gallery{
+    max-width: 1440px;
+    width: 100%;
+    margin: 50px auto;
+    @media (max-width: 768px){
+        max-width: 100%;
+        margin: 0;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            display: block;
+            margin: 0 auto;
+        }
+        div{
+            width: 406px;
+            display: inline-block;
+            margin: 50px auto;
+
+            @media(max-width: 768px){
+                display: block;
+                margin: 0 auto;
+            }
+            img{
+                width: 406px;
+                height: 609px;
+                display: block;
+
+                @media (max-width: 768px){
+                    margin: 50px auto;
+                }
+            }
+        }
+    }
+}

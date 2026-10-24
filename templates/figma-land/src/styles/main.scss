@@ -1,0 +1,28 @@
+@use 'variables';
+@use 'hero';
+@use 'features';
+@use 'fatest';
+@use 'data';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Graphik-Regular-Trial.otf') format('opentype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+}
+
+html,
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+.negrito{
+    font-weight: bold;
+    color: variables.$corPreta;
+}

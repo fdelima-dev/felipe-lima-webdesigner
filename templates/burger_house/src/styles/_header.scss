@@ -1,0 +1,66 @@
+@use 'variables';
+
+header{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1360px;
+        width: 100%;
+        margin: 0 auto;
+
+        @media (max-width: 768px){
+            display: block;
+            overflow: hidden;
+        }
+        &__brand{
+            img{
+                width: 150px;
+                height: auto;
+
+                @media (max-width: 768px){
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+        &__menu{
+            &__list{
+                list-style: none;
+                &__item{
+                    float: left;
+
+                    @media (max-width: 768px){
+                        float: none;
+                        text-align: center;
+                        padding: 12px 0;
+                    }
+                    a {
+                        color: variables.$corLink;
+                        text-decoration: none;
+                        padding: 0 20px;
+                        display: block;
+                        &:hover{
+                            color: variables.$corTema;
+                        }
+                    }
+                }
+            }
+        }
+        &__btnPedido{
+            button{
+                padding: 8px;
+                width: 120px;
+                border: none;
+                background-color: variables.$corTema;
+                color: variables.$corDeFundo;
+                border-radius: 12px;
+
+                @media (max-width: 768px){
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}

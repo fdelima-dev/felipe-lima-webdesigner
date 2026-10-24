@@ -1,0 +1,50 @@
+@use 'variables';
+
+.gallery{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__card{
+            img{
+                width: 350px;
+                border-radius: 8px;
+            }
+            h2{
+                font-size: 24px;
+                color: variables.$corLink;
+                padding-top: 20px;
+            }
+            p{
+                font-size: 20px;
+                color: variables.$corLink;
+                padding-top: 20px;
+            }
+            button{
+                margin-top: 20px;
+                border: none;
+                padding: 10px;
+                background-color: variables.$corTema;
+                font-size: 20px;
+                border-radius: 12px;
+
+                @media (max-width: 768px){
+                    margin-bottom: 20px;
+                }
+                img{
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

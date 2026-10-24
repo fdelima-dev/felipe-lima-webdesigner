@@ -1,0 +1,86 @@
+@use 'variables';
+
+header {
+    padding-top: 20px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (max-width: 768px){
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Dividi a largura em 3 partes exatamente iguais */
+        align-items: center;
+        @media (max-width: 768px){
+            display: block;
+            grid-template-columns: none;
+        }
+        &__menu {
+            list-style: none;
+            justify-self: start; /* Alinha o menu na esquerda */
+            @media (max-width: 768px){
+                justify-self: center;
+            }
+            &__item {
+                float: left;
+                @media (max-width: 768px){
+                    float: none;
+                    text-align: center;
+                }
+                
+                a {
+                    color: variables.$corLink;
+                    text-decoration: none;
+                    padding: 8px 16px;
+                    display: block;
+                    border-bottom: 2px solid transparent;
+                    transition: all .5s ease;
+
+                    &:hover, &.active {
+                         color: variables.$corTema;
+                         border-bottom: 2px solid variables.$corTema;
+                    }
+                }
+            }
+        }
+
+        &__brand {
+            text-align: center;
+            justify-self: center; /* Garante a centralização perfeita do logo */
+            font-family: variables.$fonteBrand;
+            font-size: 18px;
+            @media (max-width: 768px){
+                padding: 20px 0;
+            }
+
+            li::marker {
+                color: variables.$corTema;
+            }
+        }
+        &__contactBtn{
+            justify-self: end; /* Alinha o botão de contato na direita */
+
+            @media (max-width: 768px){
+                justify-self: center;
+            }
+            a{
+                background-color: variables.$corTema;
+                padding: 10px 20px;
+                width: 150px;
+                text-align: center;
+                color: variables.$corBranco;
+                text-decoration: none;
+
+                &:hover{
+                    background-color: variables.$corTemaHover;
+                    font-weight: bold;
+                }
+
+            }
+        }
+    }
+}

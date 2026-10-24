@@ -1,0 +1,75 @@
+@use 'variables';
+
+footer{
+    background-color: variables.$corTema;
+    color: variables.$corFundo;
+    padding: 50px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__leftSide{
+            p{
+                font-size: 16px;
+            }
+            h2{
+                font-size: 44px;
+            }
+
+            @media (max-width: 768px){
+                display: none;
+            }
+        }
+        &__rightSide{
+            a{
+                background-color: variables.$corFundo;
+                padding: 12px;
+                color: variables.$corTexto;
+                width: 200px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                border-radius: 12px;
+            }
+            .contact_img_tel{
+                width: 25px;
+            }
+            .contact_img_location{
+                width: 30px;
+            }
+        }
+    }
+}
+
+.footerTwo{
+    background-color: variables.$corRodapeDois;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+        list-style: none;
+        li{
+            float: left;
+            a{
+                color: variables.$corFundo;
+                text-decoration: none;
+                padding: 14px 16px;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+
+.footerThree{
+    background-color: variables.$corRodapeTres;
+    color: variables.$corFundo;
+    padding: 20px;
+    text-align: center;
+}

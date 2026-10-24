@@ -1,0 +1,107 @@
+@use 'variables';
+
+header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    @media (max-width: 850px) {
+        /* REMOVIDO: max-width: 0 (impedia a centralização e escondia o conteúdo) */
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 850px) {
+            flex-direction: column; /* Em vez de display: block, usa coluna para manter o Flexbox alinhado */
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Cria espaçamento vertical entre a marca, menu e botão */
+        }
+
+        &__brand {
+            img {
+                width: 100px;
+            }
+        }
+
+        &__menu {
+            &__list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                @media (max-width: 850px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &__item {
+                    float: left;
+                    margin: 0 12px;
+
+                    @media (max-width: 850px) {
+                        float: none;
+                        display: block;
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    a {
+                        color: variables.$corLink;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                        display: block;
+                        border-bottom: 2px solid transparent;
+
+                        &:hover, &.active {
+                            color: variables.$corTema;
+                            border-bottom: 2px solid variables.$corTema;
+
+                            @media (max-width: 850px) {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__btnPecaAgora {
+            a {
+                background-color: variables.$corTema;
+                padding: 12px 20px;
+                border-radius: 12px;
+                transition: all .5s ease;
+                color: variables.$corFundo;
+                text-decoration: none;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                @media (max-width: 850px) {
+                    width: 175px;
+                    margin: 0 auto;
+                }
+
+                img {
+                    width: 20px;
+                    height: auto;
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: variables.$corTemaHover;
+                }
+            }
+        }
+    }
+}

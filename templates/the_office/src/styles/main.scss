@@ -1,0 +1,26 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'about';
+@use 'data';
+@use 'linked';
+@use 'gallery';
+
+
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fonteBrand;
+    src: url('../../assets/Freedoka/Fredoka\ Regular\ 400.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Poppins/poppins.regular.ttf') format('truetype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+    background-color: variables.$corFundo;
+}

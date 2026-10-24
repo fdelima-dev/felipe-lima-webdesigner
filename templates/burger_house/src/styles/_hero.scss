@@ -1,0 +1,62 @@
+@use 'variables';
+
+.hero{
+    background-image: url('../../build/images/hero.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px;
+    margin-top: 50px;
+
+    @media (max-width: 768px){
+        background-color: rgba(0,0,0,.2);
+    }
+    &__container{
+        padding-top: 50px;
+        padding-left: 80px;
+
+        @media (max-width: 768px){
+            padding: 18px;
+        }
+        &__leftSide{
+            p.intro{
+                color: variables.$corTema;
+            }
+            h2{
+                font-size: 65px;
+                margin-top: 20px;
+                color: variables.$corLink;
+
+                @media (max-width: 1360px){
+                    text-shadow: 2px 2px 5px variables.$corDeFundo;
+                }
+            }
+            p{
+                color: variables.$corLink;
+                font-size: 18px;
+                margin-top: 20px;
+
+                @media (max-width: 1360px){
+                    text-shadow: 8px 5px 12px variables.$corDeFundo;
+                }
+            }
+            button{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                background-color: variables.$corTema;
+                border: none;
+                border-radius: 12px;
+                width: 140px;
+                cursor: pointer;
+                &:hover{
+                    background-color: variables.$corLink;
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}

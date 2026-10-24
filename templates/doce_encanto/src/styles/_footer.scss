@@ -1,0 +1,48 @@
+@use 'variables';
+
+footer{
+    background-color: variables.$corFooter;
+    padding: 50px;
+    margin-top: 50px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 850px){
+            display: block;
+            text-align: center;
+        }
+        &__brand{
+            img{
+                width: 200px;
+            }
+        }
+        &__menu{
+            &__link{
+                list-style: none;
+                &__item{
+                    display: inline-block;
+                    padding: 12px 12px 80px 10px;
+                    a{
+                        color: variables.$corFundo;
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+            }
+            p{
+                color: variables.$corFundo;
+            }
+        }
+        &__social{
+            &__links{
+                &__item{
+                    display: inline-block;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,25 @@
+@use 'variables';
+@use 'about';
+@use 'header';
+@use 'hero';
+@use 'data';
+@use 'footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fonteFredoka;
+    src: url('../../assets/fonts/Fredoka\ Regular\ 400.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/fonts/poppins.regular.ttf') format('truetype');
+}
+body{
+    background-color: variables.$corGelo;
+    font-family: variables.$fontePrincipal;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "01_callmeo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.103.1"
+  },
+  "allowScripts": {
+    "sass@1.103.1": true,
+    "gulp-sass@6.0.1": true,
+    "gulp-clean-css@4.3.0": true,
+    "gulp-rename@2.1.0": true
+  }
+}

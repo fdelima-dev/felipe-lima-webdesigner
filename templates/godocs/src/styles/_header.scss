@@ -1,0 +1,98 @@
+@use 'variables';
+
+header{
+    max-width: 1440px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+
+    @media (max-width: 768px){
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            display: block;
+        }
+
+        &__menu{
+            margin-left: 20px;
+            &__list{
+                list-style: none;
+                &__item{
+                    float: left;
+
+                    @media (max-width: 768px){
+                        float: none;
+                        text-align: center;
+                        padding: 20px 0;
+                    }
+
+                    a{
+                        color: variables.$corLink;
+                        text-decoration: none;
+                        padding: 0 14px;
+                        display: block;
+                        &:hover{
+                            color: variables.$corHoverLink;
+                        }
+                    }
+                }
+            }
+        }
+        &__btns{
+            &__list{
+                list-style: none;
+                &__item{
+
+                    @media (max-width: 768px){
+                        float: none;
+                        display: block;
+                    }
+                    &__first{
+                        color: variables.$corBotao;
+                        border: 2px solid variables.$corBotao;
+                        border-radius: 12px;
+                        padding: 14px 30px;
+                        margin: 0 20px;
+                        text-decoration: none;
+                        width: 200px;
+
+                        @media (max-width: 768px){
+                            margin: 20px auto;
+                            display: block;
+                            text-align: center;
+                        }
+
+                        &:hover{
+                            background-color: variables.$corBotao;
+                            color: variables.$corFundo;
+                        }
+
+                    }
+                    &__second{
+                        background-color: variables.$corBotao;
+                        color: variables.$corFundo;
+                        width: 250px;
+                        padding: 16px 40px;
+                        border-radius: 12px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        @media (max-width: 768px){
+                            margin: 0 auto;
+                            display: block;
+                            width: 200px;
+                            text-align: center;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'data';
+@use 'about';
+@use "scaff";
+@use "footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/actor/Actor-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fonteTema;
+    src: url('../../assets/Inter/inter.regular.ttf') format('truetype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+    background-color: variables.$fontePrincipal;
+}

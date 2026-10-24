@@ -1,0 +1,25 @@
+@use 'variables';
+
+footer{
+    background-color: variables.$corFooter;
+    padding: 30px;
+    color: variables.$corGelo;
+    margin-top: 50px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__list{
+            &__menu{
+                list-style: none;
+                &__item{
+                    display: inline-block;
+                    padding: 20px;
+                    img{
+                        width: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

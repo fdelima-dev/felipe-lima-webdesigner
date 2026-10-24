@@ -1,0 +1,63 @@
+@use 'variables';
+
+.data{
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px 20% 20px 20%;
+
+        @media (max-width: 768px){
+            display: block;
+        }
+
+        &__img{
+            img{
+                @media (max-width: 768px){
+                    width: 320px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+        &__field{
+            
+            h2{
+                font-size: 48px;
+                line-height: 55px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 28px;
+                line-height: 60px;
+                color: variables.$corParagrafo;
+                font-weight: 400;
+            }
+            form{
+                display: inline-block;
+            }
+            input[type=text]{
+                background-color: variables.$corInput;
+                border: none;
+                padding: 10px;
+                margin: 35px auto 0;
+                width: 236px;
+                height: 52px;
+                border-radius: 40px;
+                cursor: pointer;
+                box-shadow: 1px 2px 3px #333;
+            }
+            button{
+                border: none;
+                padding: 10px;
+                margin: 35px auto 0;
+                background-color: #007bff;
+                width: 236px;
+                height: 52px;
+                color: #fff;
+                border-radius: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}

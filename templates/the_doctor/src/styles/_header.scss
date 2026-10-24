@@ -1,0 +1,81 @@
+@use 'variables';
+
+header{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px){
+            display: block;
+            overflow: hidden;
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__brand{
+            display: flex;
+            align-items: center;
+            @media (max-width: 768px){
+                display: block;
+            }
+            img{
+                width: 38px;
+                display: inline;
+            }
+            h2{
+                display: inline;
+                color: variables.$corTema;
+                font-weight: bold;
+                font-family: variables.$fonteTema;
+            }
+        }
+        &__menu{
+            &__list{
+                list-style: none;
+                &__item{
+                    float: left;
+                    @media (max-width: 768px){
+                        float: none;
+                        text-align: center;
+                    }
+                    a {
+                        color: variables.$corTexto;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__agendarOne{
+            display: flex;
+            align-items: center;
+            img{
+                display: inline;
+                padding: 0 3px;
+            }
+            a{
+                background-color: variables.$corTema;
+                color: variables.$corFundo;
+                text-decoration: none;
+                display: flex;
+                padding: 8px;
+                border-radius: 8px;
+
+                @media (max-width: 768px){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+            }
+
+        }
+    }
+}

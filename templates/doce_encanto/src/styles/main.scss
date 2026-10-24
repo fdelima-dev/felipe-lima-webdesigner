@@ -1,0 +1,51 @@
+@use 'variables';
+@use 'header';
+@use 'about';
+@use 'data';
+@use 'gallery';
+@use 'pecaAgora';
+@use 'footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Inter/inter.regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fonteTema;
+    src: url('../../assets/Playfair/playfair-display.regular.ttf') format('truetype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+    background-color: variables.$corFundo;
+}
+.py-2{
+    padding: 20px 0; 
+}
+.fonteTema{
+    font-family: variables.$fonteTema;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+table tr td{
+    border-spacing: 25px;
+    padding: 12px;
+}
+table tr td img{
+    display: block;
+    margin: 0 auto;
+    width: 83px;
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}

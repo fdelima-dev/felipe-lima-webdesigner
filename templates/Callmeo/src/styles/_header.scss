@@ -1,0 +1,132 @@
+@use 'variables';
+
+header{
+    max-width: 1440px;
+    width: 100%;
+    margin: 20px auto;
+
+    @media (max-width: 768px){
+        max-width: 768px;
+        margin: 20px 10px 10px 05px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+
+        @media (max-width: 768px){
+            flex-wrap: wrap;
+        }
+        &__brand{
+            img{
+                display: inline;
+                width: 65px;
+            }
+            h1{
+                display: inline;
+                font-family: variables.$fonteFredoka;
+                color: variables.$corLogo;
+                margin-bottom: -12px;
+            }
+        }
+        &__hamburger {
+
+                width: 32px;
+                cursor: pointer;
+                margin-right: 20px;
+
+                span {
+                    width: 100%;
+                    height: 4px;
+                    background-color: variables.$corHamburger;
+                    display: block;
+                    margin: 7px 0;
+                    transition: .3s;
+                }
+
+                &.spanActive {
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span {
+                        width: 4px;
+                        height: 32px;
+                        margin: 0;
+                    }
+                    @media (min-width: 769px) {
+                        display: none;
+                     }
+                }
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+                @media (min-width: 769px) {
+                    display: none;
+                }
+            }
+        &__menu{
+            &__list{
+                list-style: none;
+                &__item{
+                    float: left;
+                    margin: 0 20px;
+                    display: flex;
+                    gap: 40px;
+                    
+                    @media (max-width: 768px){
+                        float: none;
+                        margin: 0;
+                        display: block;
+                    }
+                    a{
+                        color: variables.$corLink;
+                        text-decoration: none;
+                        padding: 5px 10px;
+                        display: block;
+                        transition: all .5s ease;
+                        border-bottom: 4px solid transparent;
+                        text-align: center;
+
+                        @media (max-width: 768px){
+                            padding: 14px 16px;
+                            transition: none;
+                        }
+                        
+                        &:hover, &.active{
+                            border-bottom: 4px solid variables.$corHamburger;
+
+                            @media (max-width: 768px){
+                                display: block;
+                                width: 400px;
+                                text-align: center;
+                                background-color: variables.$corHamburger;
+                                color: variables.$corGelo;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 768px){
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding-top: 20px;
+                align-items: center;
+                z-index: 1;
+                background-color: variables.$corGelo;
+            }
+
+            &.active{
+                display: flex;
+            }
+        }
+    }
+}

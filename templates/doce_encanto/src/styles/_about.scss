@@ -1,0 +1,60 @@
+@use 'variables';
+
+.about{
+    background-image: url('../../build/images/hero-bolo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-height: 100vh;
+    height: 700px;
+    margin-top: 30px;
+    @media (max-width: 768px){
+        height: 400px;
+    }
+    &__container{
+        @media (max-width: 850px){
+            margin-bottom: 200px;
+        }
+        &__esquerda{
+            padding-left: 65px;
+            @media (max-width:850px){
+                padding: 0;
+            }
+            img{
+                width: 350px;
+            }
+            h2{
+                font-family: variables.$fonteTema;
+                color: variables.$corFundo;
+                font-size:64px;
+                @media (max-width: 850px){
+                    color: variables.$corLink;
+                    margin-top: 100px;
+                    font-size: 36px;
+                }
+            }
+            p{
+                margin-top: 20px;
+                margin-bottom: 50px;
+                font-size: 24px;
+                color: variables.$corFundo; 
+                @media (max-width: 850px){
+                    color: variables.$corLink;
+                    font-size: 18px;
+                }
+            }
+            a{
+                background-color: variables.$corTema;
+                color: variables.$corFundo;
+                text-decoration: none;
+                padding: 12px;
+                width: 150px;
+                border-radius: 8px;
+                transition: all .5s ease;
+                &:hover{
+                    background-color: variables.$corTemaHover;
+                }
+            }
+        }
+    }
+}

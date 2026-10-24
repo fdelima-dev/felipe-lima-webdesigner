@@ -1,0 +1,53 @@
+@use 'variables';
+
+.data{
+    max-width: 1440px;
+    width: 100%;
+    margin: 40px auto;
+    @media (max-width: 850px){
+        margin-top: 200px;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+            @media (max-width: 850px) {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 130px; /* Garante o espaço a partir do topo do pai */
+            }
+        &__card{
+            width: 206px;
+            height: 325px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 7px variables.$corLink;
+
+            @media (max-width: 850px){
+                margin: 20px 0;
+            }
+            img{
+                width: 206px;
+            }
+            p{
+                font-size: 16px;
+                margin-left: 7px;
+                margin-bottom: 10px;
+            }
+            div{
+                margin-top: 25px;
+                margin-left: 8px;
+                a{
+                padding: 5px;
+                background-color: variables.$corTema;
+                color: variables.$corFundo;
+                text-decoration: none;
+                border-radius: 8px;
+                margin-top: 20px;
+
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,32 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'data';
+@use 'gallery';
+@use 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/Inter/inter.regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fonteTema;
+    src: url('../../assets/Vampiro_One/VampiroOne-Regular.ttf') format('truetype');
+}
+body{
+    background-color: variables.$corDeFundo;
+    font-family: variables.$fontePrincipal;
+}
+.fonteTema{
+    font-family: variables.$fonteTema;
+    color: variables.$corTema;
+}
+.corTema{
+    color: variables.$corTema;
+}
